@@ -2,7 +2,7 @@ import streamlit as st
 from rembg import remove
 from PIL import Image
 
-st.title("rembg Demo")
+st.title("Remove Background")
 col1, col2 = st.columns(2)
 images = st.sidebar.file_uploader("Load Image", accept_multiple_files =True)
 if images:
