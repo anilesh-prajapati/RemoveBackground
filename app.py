@@ -22,7 +22,7 @@ if images:
             output.save(output_stream, format="PNG")
             
             # Download button
-            col2.text("  ")
+            col2.text("anni")
             col2.download_button(
                 label="Download image",
                 data=output_stream.getvalue(),
