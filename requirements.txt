@@ -1,4 +1,4 @@
-streamlit==1.25.0
-rembg==2.0.50
+streamlit
+rembg
 opencv-python
 Pillow
