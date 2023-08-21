@@ -19,7 +19,7 @@ if images:
             
             # Create a BytesIO object to store the image data
             output_stream = io.BytesIO()
-            output_pil.save(output_stream, format="PNG")
+            output.save(output_stream, format="PNG")
             
             # Download button
             btn = st.download_button(
