@@ -21,8 +21,8 @@ if images:
             output.save(output_stream, format="PNG")
             
             # Download button
-            btn = st.download_button(
-                    label="Download image",
-                    data=output_stream.getvalue(),
-                    file_name="extracted_image.png",
-                    mime="image/png")
+            st.download_button(
+                label="Download image",
+                data=output_stream.getvalue(),
+                file_name="extracted_image.png",
+                mime="image/png")
