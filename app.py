@@ -1,5 +1,4 @@
 import streamlit as st
-#import cv2
 from rembg import remove
 from PIL import Image
 import io
@@ -26,5 +25,4 @@ if images:
                     label="Download image",
                     data=output_stream.getvalue(),
                     file_name="extracted_image.png",
-                    mime="image/png"
-                )
+                    mime="image/png")
