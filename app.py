@@ -2,7 +2,7 @@ import streamlit as st
 from rembg import remove
 from PIL import Image
 import io
-
+from streamlit_extras.add_vertical_space import add_vertical_space
 
 
 
@@ -11,6 +11,7 @@ st.divider()
 col1, col2 = st.columns(2)
 with st.sidebar:
     images = st.sidebar.file_uploader("Load Image", accept_multiple_files =True)
+    add_vertical_space(16)
     st.write('Made with ❤️ by [Anilesh Prajapati](www.linkedin.com/in/anilesh-prajapati-5b5748239)')
 if images:
     for image in images:
