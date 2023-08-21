@@ -9,7 +9,9 @@ import io
 st.title("Remove Background")
 st.divider()
 col1, col2 = st.columns(2)
-images = st.sidebar.file_uploader("Load Image", accept_multiple_files =True)
+with st.sidebar:
+    images = st.sidebar.file_uploader("Load Image", accept_multiple_files =True)
+    st.write('Made with ❤️ by [Anilesh Prajapati](www.linkedin.com/in/anilesh-prajapati-5b5748239)
 if images:
     for image in images:
         with Image.open(image) as img:
