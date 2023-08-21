@@ -14,3 +14,10 @@ if images:
             output = remove(img)
             col2.header("Extracted")
             col2.image(output)
+            with open(f"{output}.png", "rb") as file:
+                btn = st.download_button(
+                        label="Download image",
+                        data=file,
+                        file_name="flower.png",
+                        mime="image/png"
+                      )
