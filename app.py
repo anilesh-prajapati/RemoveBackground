@@ -3,6 +3,15 @@ from rembg import remove
 from PIL import Image
 import io
 
+def v_spacer(height, sb=False) -> None:
+    for _ in range(height):
+        if sb:
+            st.sidebar.write('\n')
+        else:
+            st.write('\n')
+
+
+
 st.title("Remove Background")
 st.divider()
 col1, col2 = st.columns(2)
@@ -22,7 +31,7 @@ if images:
             output.save(output_stream, format="PNG")
             
             # Download button
-            col2.text("anni")
+            v_spacer(height=3, sb=True)
             col2.download_button(
                 label="Download image",
                 data=output_stream.getvalue(),
