@@ -3,12 +3,6 @@ from rembg import remove
 from PIL import Image
 import io
 
-def v_spacer(height, sb=False) -> None:
-    for _ in range(height):
-        if sb:
-            st.sidebar.write('\n')
-        else:
-            st.write('\n')
 
 
 
@@ -31,7 +25,6 @@ if images:
             output.save(output_stream, format="PNG")
             
             # Download button
-            v_spacer(height=3, sb=True)
             col2.download_button(
                 label="Download image",
                 data=output_stream.getvalue(),
