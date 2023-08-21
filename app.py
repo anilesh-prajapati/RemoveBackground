@@ -4,6 +4,7 @@ from PIL import Image
 import io
 
 st.title("Remove Background")
+st.divider()
 col1, col2 = st.columns(2)
 images = st.sidebar.file_uploader("Load Image", accept_multiple_files =True)
 if images:
