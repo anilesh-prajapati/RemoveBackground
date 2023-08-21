@@ -1,6 +1,7 @@
 import streamlit as st
 from rembg import remove
 from PIL import Image
+import io
 
 st.title("Remove Background")
 col1, col2 = st.columns(2)
@@ -14,10 +15,15 @@ if images:
             output = remove(img)
             col2.header("Extracted")
             col2.image(output)
-            with open(f"{output}.png", "rb") as file:
-                btn = st.download_button(
-                        label="Download image",
-                        data=file,
-                        file_name="flower.png",
-                        mime="image/png"
-                      )
+            
+            # Create a BytesIO object to store the image data
+            output_stream = io.BytesIO()
+            output_pil.save(output_stream, format="PNG")
+            
+            # Download button
+            btn = st.download_button(
+                    label="Download image",
+                    data=output_stream.getvalue(),
+                    file_name="extracted_image.png",
+                    mime="image/png"
+                )
