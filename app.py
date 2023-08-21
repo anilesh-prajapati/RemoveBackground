@@ -21,7 +21,7 @@ if images:
             output.save(output_stream, format="PNG")
             
             # Download button
-            st.download_button(
+            col2.download_button(
                 label="Download image",
                 data=output_stream.getvalue(),
                 file_name="extracted_image.png",
